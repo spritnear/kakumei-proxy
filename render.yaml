@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: flask-proxy
+    name: kakumei-proxy
     env: python
-    buildCommand: ""
+    buildCommand: pip install -r requirements.txt
     startCommand: python proxy.py
-    plan: free
     region: oregon
-    branch: main
-    healthCheckPath: /
+    plan: free
+    runtime: python

@@ -2,8 +2,9 @@ services:
   - type: web
     name: kakumei-proxy
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python proxy.py
-    region: oregon
-    plan: free
-    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python proxy.py"
+    envVars:
+      - key: FLASK_ENV
+        value: production
+    ...

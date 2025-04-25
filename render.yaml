@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flask-proxy
+    env: python
+    buildCommand: ""
+    startCommand: python proxy.py
+    plan: free
+    region: oregon
+    branch: main
+    healthCheckPath: /
